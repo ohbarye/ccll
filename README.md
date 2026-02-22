@@ -1,16 +1,12 @@
 # ccll - Claude Code Language Learning
 
-A [Claude Code plugin](https://docs.anthropic.com/en/docs/claude-code/plugins) that augments your everyday coding sessions with language coaching for intermediate+ learners.
+A collection of [Claude Code plugins](https://docs.anthropic.com/en/docs/claude-code/plugins) for language learning through everyday coding sessions.
 
-## What It Does
+## Plugins
 
-When activated, a language coaching subagent analyzes each conversational exchange and appends brief coaching notes after Claude's normal response. The coaching focuses on:
-
-- **Natural expressions** — how native speakers would phrase the same intent in a professional engineering context
-- **Vocabulary highlights** — idiomatic phrases, technical collocations, and register guidance
-- **Corrections** — fixes for genuine errors or unnatural phrasing (not nitpicks)
-
-The coaching is tuned for software engineering communication: PR comments, Slack messages, standups, technical docs, and pair programming dialogue.
+| Plugin | Purpose |
+|--------|---------|
+| [**learn-along**](#learn-along) | Conversational language coaching for intermediate+ learners |
 
 ## Installation
 
@@ -28,7 +24,17 @@ claude plugin install learn-along@ccll
 /plugin install learn-along@ccll
 ```
 
-## Usage
+## Learn Along
+
+When activated, a language coaching subagent analyzes each conversational exchange and appends brief coaching notes after Claude's normal response. The coaching focuses on:
+
+- **Natural expressions** — how native speakers would phrase the same intent in a professional engineering context
+- **Vocabulary highlights** — idiomatic phrases, technical collocations, and register guidance
+- **Corrections** — fixes for genuine errors or unnatural phrasing (not nitpicks)
+
+The coaching is tuned for software engineering communication: PR comments, Slack messages, standups, technical docs, and pair programming dialogue.
+
+### Usage
 
 Activate with the slash command:
 
@@ -40,7 +46,7 @@ Activate with the slash command:
 
 Once active, every response includes a short coaching section (3-8 lines) after a `---` separator. Your technical workflow is never interrupted — coaching is always appended after the full technical response.
 
-## Example
+### Example
 
 If you write in Japanese during a coding session:
 
@@ -63,13 +69,9 @@ Claude responds with the technical answer first, then appends:
 **Register note:** On Slack: "CI is red on this PR, can you take a look?"
 ```
 
-## What to Expect
+## Contributing
 
-After installation, the plugin is available in any Claude Code session. Run `/learn-along` to activate — no other configuration needed.
-
-- Coaching appears after every response as a short section (3-8 lines) below a `---` separator
-- Your technical workflow is never interrupted — coaching is always appended after the full technical response
-- Coaching does not persist across sessions; run `/learn-along` again in each new session
+Feedback, issue reports, and contributions are welcome on [GitHub](https://github.com/ohbarye/ccll).
 
 ## License
 

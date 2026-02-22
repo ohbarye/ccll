@@ -1,0 +1,19 @@
+{
+  "name": "ccll",
+  "owner": {
+    "name": "ohbarye",
+    "url": "https://github.com/ohbarye"
+  },
+  "metadata": {
+    "description": "Claude Code Language Learning - language coaching plugins for software engineers",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "learn-along",
+      "source": "./plugins/learn-along",
+      "description": "Conversational language coaching for intermediate+ learners",
+      "version": "0.1.0"
+    }
+  ]
+}
