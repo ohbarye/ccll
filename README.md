@@ -17,9 +17,9 @@ The coaching is tuned for software engineering communication: PR comments, Slack
 Activate with the slash command:
 
 ```
-/lang-coach en          # Target: English, native: auto-detect
-/lang-coach from:ja to:en  # Explicit native/target
-/lang-coach off         # Deactivate
+/learning-language en          # Target: English, native: auto-detect
+/learning-language from:ja to:en  # Explicit native/target
+/learning-language off         # Deactivate
 ```
 
 Once active, every response includes a short coaching section (3-8 lines) after a `---` separator. Your technical workflow is never interrupted — coaching is always appended after the full technical response.
@@ -35,7 +35,7 @@ Claude responds with the technical answer first, then appends:
 ```
 ---
 
-**Lang Coach** (target: English)
+**Learning Language** (target: English)
 
 **Your intent in English:**
 > Can you investigate why the tests in this PR are failing?

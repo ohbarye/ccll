@@ -1,5 +1,5 @@
 ---
-name: lang-coach
+name: learning-language
 description: Language coaching subagent for intermediate+ learners. Analyzes conversational exchanges in software engineering contexts and provides natural target-language expressions, vocabulary highlights, corrections, and register guidance.
 model: inherit
 color: cyan
