@@ -1,0 +1,19 @@
+{
+  "name": "lang-coach",
+  "version": "0.1.0",
+  "description": "Conversational language coaching for intermediate+ learners. Augments normal Claude Code sessions with natural expressions, vocabulary highlights, and corrections in your target language. Focused on software engineering communication (PRs, Slack, standups, technical docs).",
+  "author": {
+    "name": "ohbarye",
+    "url": "https://github.com/ohbarye"
+  },
+  "repository": "https://github.com/ohbarye/ccll",
+  "license": "MIT",
+  "keywords": [
+    "language-learning",
+    "english",
+    "coaching",
+    "vocabulary",
+    "translation",
+    "software-engineering"
+  ]
+}
