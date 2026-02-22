@@ -49,9 +49,27 @@ Claude responds with the technical answer first, then appends:
 
 ## Installation
 
-```sh
-claude plugin add ohbarye/ccll
+**From terminal:**
+
+```bash
+claude plugin marketplace add ohbarye/ccll
+claude plugin install learning-language@ccll
 ```
+
+**From a Claude session:**
+
+```bash
+/plugin marketplace add ohbarye/ccll
+/plugin install learning-language@ccll
+```
+
+## What to Expect
+
+After installation, the plugin is available in any Claude Code session. Run `/learning-language` to activate — no other configuration needed.
+
+- Coaching appears after every response as a short section (3-8 lines) below a `---` separator
+- Your technical workflow is never interrupted — coaching is always appended after the full technical response
+- Coaching does not persist across sessions; run `/learning-language` again in each new session
 
 ## License
 
