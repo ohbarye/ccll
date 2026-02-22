@@ -1,29 +1,29 @@
 ---
-name: learning-language
-description: Augments normal Claude Code conversations with language learning coaching for intermediate+ learners. Activate with `/learning-language <target-lang>` (e.g., `/learning-language en`). A subagent analyzes each exchange and provides natural expressions, vocabulary highlights, and corrections. Deactivate with `/learning-language off`. Triggers on "learning-language", "language coach", or requests to practice a language during coding sessions.
+name: learn-along
+description: Augments normal Claude Code conversations with language learning coaching for intermediate+ learners. Activate with `/learn-along <target-lang>` (e.g., `/learn-along en`). A subagent analyzes each exchange and provides natural expressions, vocabulary highlights, and corrections. Deactivate with `/learn-along off`. Triggers on "learn-along", "language coach", or requests to practice a language during coding sessions.
 ---
 
-# Learning Language - Conversational Language Learning
+# Learn Along - Conversational Language Learning
 
 Augment everyday software engineering conversations with language coaching for intermediate+ learners.
 
 ## When to Use This Skill
 
-- User runs `/learning-language` or `/learning-language <target-language>`
+- User runs `/learn-along` or `/learn-along <target-language>`
 - User mentions wanting to practice a language during Claude Code sessions
-- User says "learning language", "language coach", or similar
+- User says "learn along", "language coach", or similar
 
 ## Activation
 
-When the user invokes `/learning-language`:
+When the user invokes `/learn-along`:
 
 1. Parse arguments:
-   - `/learning-language en` → target: English, native: auto-detect
-   - `/learning-language from:ja to:en` → native: Japanese, target: English
-   - `/learning-language` (no args) → target: English, native: auto-detect
-   - `/learning-language off` → deactivate
+   - `/learn-along en` → target: English, native: auto-detect
+   - `/learn-along from:ja to:en` → native: Japanese, target: English
+   - `/learn-along` (no args) → target: English, native: auto-detect
+   - `/learn-along off` → deactivate
 2. Confirm activation with a brief message stating the configured languages.
-3. From this point forward, after **every response**, invoke the `learning-language` subagent.
+3. From this point forward, after **every response**, invoke the `learn-along` subagent.
 
 ### Auto-Detection of Native Language
 
@@ -31,19 +31,19 @@ When native language is not explicitly specified:
 
 1. Detect from the user's first non-target-language message after activation.
 2. If the user only writes in the target language, ask once to confirm their native language.
-3. Once detected, confirm: "Native language detected: [X]. Use `/learning-language from:<native> to:<target>` to adjust."
+3. Once detected, confirm: "Native language detected: [X]. Use `/learn-along from:<native> to:<target>` to adjust."
 
 ## Deactivation
 
-When the user runs `/learning-language off` or says "stop language coaching":
+When the user runs `/learn-along off` or says "stop language coaching":
 
-1. Stop invoking the learning-language subagent.
+1. Stop invoking the learn-along subagent.
 2. Confirm deactivation.
 
 ## State
 
-- Learning-language mode is active for the **current conversation session only**.
-- If context becomes unclear after a long conversation, briefly check: "Learning Language is still active (target: English). Say `/learning-language off` to stop."
+- Learn-along mode is active for the **current conversation session only**.
+- If context becomes unclear after a long conversation, briefly check: "Learn Along is still active (target: English). Say `/learn-along off` to stop."
 - Activation does **not** persist across sessions. The user must re-activate in new sessions.
 
 ## Execution Flow (Per Exchange)
@@ -54,9 +54,9 @@ When the user runs `/learning-language off` or says "stop language coaching":
 
 Process the user's request and provide your full technical response as usual.
 
-### Step 2: Invoke the learning-language Subagent
+### Step 2: Invoke the learn-along Subagent
 
-Use the `Task` tool with `subagent_type: "learning-language"` and `model: "haiku"`. The subagent will classify the input and produce appropriate coaching output.
+Use the `Task` tool with `subagent_type: "learn-along"` and `model: "haiku"`. The subagent will classify the input and produce appropriate coaching output.
 
 Provide in the prompt:
 
@@ -69,7 +69,7 @@ Example invocation:
 
 ```
 Task tool call:
-  subagent_type: "learning-language"
+  subagent_type: "learn-along"
   model: "haiku"
   prompt: |
     Native: Japanese, Target: English
@@ -91,7 +91,7 @@ Append the subagent's output at the end of your response after a `---` separator
 ```
 ---
 
-**Learning Language** (target: English)
+**Learn Along** (target: English)
 
 [Subagent output here - varies by category]
 ```

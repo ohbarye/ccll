@@ -17,9 +17,9 @@ The coaching is tuned for software engineering communication: PR comments, Slack
 Activate with the slash command:
 
 ```
-/learning-language en          # Target: English, native: auto-detect
-/learning-language from:ja to:en  # Explicit native/target
-/learning-language off         # Deactivate
+/learn-along en          # Target: English, native: auto-detect
+/learn-along from:ja to:en  # Explicit native/target
+/learn-along off         # Deactivate
 ```
 
 Once active, every response includes a short coaching section (3-8 lines) after a `---` separator. Your technical workflow is never interrupted — coaching is always appended after the full technical response.
@@ -35,7 +35,7 @@ Claude responds with the technical answer first, then appends:
 ```
 ---
 
-**Learning Language** (target: English)
+**Learn Along** (target: English)
 
 **Your intent in English:**
 > Can you investigate why the tests in this PR are failing?
@@ -53,23 +53,23 @@ Claude responds with the technical answer first, then appends:
 
 ```bash
 claude plugin marketplace add ohbarye/ccll
-claude plugin install learning-language@ccll
+claude plugin install learn-along@ccll
 ```
 
 **From a Claude session:**
 
 ```bash
 /plugin marketplace add ohbarye/ccll
-/plugin install learning-language@ccll
+/plugin install learn-along@ccll
 ```
 
 ## What to Expect
 
-After installation, the plugin is available in any Claude Code session. Run `/learning-language` to activate — no other configuration needed.
+After installation, the plugin is available in any Claude Code session. Run `/learn-along` to activate — no other configuration needed.
 
 - Coaching appears after every response as a short section (3-8 lines) below a `---` separator
 - Your technical workflow is never interrupted — coaching is always appended after the full technical response
-- Coaching does not persist across sessions; run `/learning-language` again in each new session
+- Coaching does not persist across sessions; run `/learn-along` again in each new session
 
 ## License
 
