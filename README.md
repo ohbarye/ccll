@@ -12,6 +12,22 @@ When activated, a language coaching subagent analyzes each conversational exchan
 
 The coaching is tuned for software engineering communication: PR comments, Slack messages, standups, technical docs, and pair programming dialogue.
 
+## Installation
+
+**From terminal:**
+
+```bash
+claude plugin marketplace add ohbarye/ccll
+claude plugin install learn-along@ccll
+```
+
+**From a Claude session:**
+
+```bash
+/plugin marketplace add ohbarye/ccll
+/plugin install learn-along@ccll
+```
+
 ## Usage
 
 Activate with the slash command:
@@ -45,22 +61,6 @@ Claude responds with the technical answer first, then appends:
 - 原因を調べて → "investigate the root cause" -- or casually, "look into why"
 
 **Register note:** On Slack: "CI is red on this PR, can you take a look?"
-```
-
-## Installation
-
-**From terminal:**
-
-```bash
-claude plugin marketplace add ohbarye/ccll
-claude plugin install learn-along@ccll
-```
-
-**From a Claude session:**
-
-```bash
-/plugin marketplace add ohbarye/ccll
-/plugin install learn-along@ccll
 ```
 
 ## What to Expect
